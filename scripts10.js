@@ -91,14 +91,14 @@ const lastHoliday = new Date(Math.max(
 ));
 console.log(
     `${firstHoliday.getDate().toString().padStart(2, '0')}/${(firstHoliday.getMonth() + 1).toString().padStart(2, '0')}/${currentYear}`
-  );
-  
-  console.log(
+);
+console.log(
     `${lastHoliday.getDate().toString().padStart(2, '0')}/${(lastHoliday.getMonth() + 1).toString().padStart(2, '0')}/${currentYear}`
-  );
+);
+
   
   const randomIndex = Math.floor(Math.random() * 9); // Generate a random index between 0 and 8
   const randomHoliday = holidays[randomIndex];
   console.log(
-    `${randomHoliday.date.getDate().toString().padStart(2, '0')}/${(randomHoliday.date.getMonth() + 1).toString().padStart(2, '0')}/${currentYear}`
+    `${randomHoliday.date.getDate().toString().padStart(2, 0)}/${(randomHoliday.date.getMonth() + 1).toString().padStart(2, 0)}/${currentYear}`
   );
