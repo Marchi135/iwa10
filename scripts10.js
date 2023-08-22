@@ -2,9 +2,9 @@ const currentYear = new Date().getFullYear();
 
 const holidays = {
     0: {
-    id: 0,
-    name: 'Day of Reconciliation',
-    date: `16 December ${currentYear}`,
+        id: 0,
+        name: 'Day of Reconciliation',
+        date: new Date(`16 December ${currentYear}`),
     },
  1: {
     id: 1,
@@ -48,8 +48,8 @@ const holidays = {
 }, 
 }
 
-const christmas = 6
-const futureId = 9
+const christmas = 6;
+const futureId = 9;
 
 console.log(holidays[futureId] ? holidays[futureId].name: `ID ${futureId} not created yet`); 
 
@@ -78,6 +78,7 @@ const firstHoliday = new Date(Math.min(
     holidays[8].date,
 ));
 
+
 const lastHoliday = new Date(Math.max(
     holidays[0].date,
     holidays[1].date,
@@ -89,12 +90,14 @@ const lastHoliday = new Date(Math.max(
     holidays[7].date,
     holidays[8].date,
 ));
+
 console.log(
     `${firstHoliday.getDate().toString().padStart(2, '0')}/${(firstHoliday.getMonth() + 1).toString().padStart(2, '0')}/${currentYear}`
 );
 console.log(
     `${lastHoliday.getDate().toString().padStart(2, '0')}/${(lastHoliday.getMonth() + 1).toString().padStart(2, '0')}/${currentYear}`
 );
+
 
   
   const randomIndex = Math.floor(Math.random() * 9); // Generate a random index between 0 and 8
